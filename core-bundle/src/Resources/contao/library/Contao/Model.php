@@ -581,7 +581,7 @@ abstract class Model
 		// The relation does not exist
 		if (!isset($this->arrRelations[$strKey]))
 		{
-			throw new \Exception("Field $strKey does not seem to be related");
+			throw new \Exception("Field $strKey does not seem to be related in ".self::getTable());
 		}
 
 		// The relation exists but there is no reference yet (see #6161 and #458)
